@@ -6,17 +6,17 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title>로그인 화면</title>
 </head>
 <body>
-<form action="login" method="post">
-	<label for="id">아이디</label><br>
-<input type="text" name="id" value="${saveId}"><br>
-<label for="password">비밀번호</label><br>
-<input type="password" name="password"><br>
-<input type="checkbox" name="rememberId"
-        ${not empty saveId ? "checked" : ""}>아이디 저장<br>
-<input type="submit" value="로그인"><br>
+<form action="${pageContext.request.contextPath}/login" method="post">
+	<!--<form action="userInfo.jsp" method="post">-->
+	<label for="id">아이디</label>
+	<input type="text" name="id" id="id" value="${saveId}"><br>
+	<label for="pwd">패스워드</label>
+	<input type="password" name="pwd" id="pwd"><br>
+	<input type="checkbox" name="checkbox" checked="checked">아이디 기억<br>
+	<input type="submit" name="submit" id="submit" value="로그인">
 </form>
 </body>
 </html>
