@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class LoginController2 {
+public class LoginController {
 	@RequestMapping("/index")
 	public String index() {
 		System.out.println("hello");
